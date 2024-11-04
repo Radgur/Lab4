@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="590.0" prefWidth="896.0" spacing="20.0" style="-fx-background-color: #8d8d8d;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab4.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <AnchorPane prefHeight="467.0" prefWidth="721.0">
+      <children>
+         <Pane prefHeight="172.0" prefWidth="302.0" style="-fx-border-color: #202e88; -fx-border-width: 3;">
+            <children>
+              <Button fx:id="button_arrow" layoutX="105.0" layoutY="121.0" onAction="#button_arrow_clicked" prefHeight="31.0" prefWidth="92.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="----------&gt;" />
+               <Label layoutX="8.0" layoutY="8.0" prefHeight="17.0" prefWidth="287.0" text="Задание №1" />
+               <TextArea fx:id="textArea1" layoutX="14.0" layoutY="34.0" prefHeight="62.0" prefWidth="116.0" style="-fx-border-color: #202e88;" />
+               <TextArea fx:id="textArea2" layoutX="170.0" layoutY="34.0" prefHeight="62.0" prefWidth="116.0" style="-fx-border-color: #202e88;" />
+            </children>
+         </Pane>
+         <Pane layoutX="314.0" prefHeight="172.0" prefWidth="250.0" style="-fx-border-color: #202e88; -fx-border-width: 3;">
+            <children>
+               <Label layoutX="9.0" layoutY="6.0" prefHeight="17.0" prefWidth="226.0" text="Задание №2" />
+               <ProgressBar fx:id="widget3" layoutX="83.0" layoutY="130.0" prefHeight="17.0" prefWidth="138.0" progress="0.85" />
+               <CheckBox fx:id="checkBox1" layoutX="26.0" layoutY="85.0" mnemonicParsing="false" onAction="#checkBox_selected" selected="true" style="-fx-border-color: #202e88;" />
+               <CheckBox fx:id="checkBox2" layoutX="26.0" layoutY="44.0" mnemonicParsing="false" onAction="#checkBox_selected" selected="true" style="-fx-border-color: #202e88;" />
+               <CheckBox fx:id="checkBox3" layoutX="26.0" layoutY="129.0" mnemonicParsing="false" onAction="#checkBox_selected" selected="true" style="-fx-border-color: #202e88;" />
+               <DatePicker fx:id="widget1" layoutX="83.0" layoutY="82.0" prefHeight="25.0" prefWidth="138.0" promptText="24.04.2004" style="-fx-border-color: #202e88;" />
+               <RadioButton fx:id="widget2" layoutX="87.0" layoutY="45.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="124.0" selected="true" text="Radiohead" />
+            </children>
+         </Pane>
+         <Pane layoutY="186.0" prefHeight="370.0" prefWidth="302.0" style="-fx-border-color: #202e88; -fx-border-width: 3;">
+            <children>
+               <Label layoutX="7.0" layoutY="8.0" prefHeight="17.0" prefWidth="226.0" text="Задание №3" />
+               <Button fx:id="button_soup" alignment="TOP_LEFT" layoutX="26.0" layoutY="45.0" mnemonicParsing="false" onAction="#order_click" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="Борщ                             45 руб." />
+               <Button fx:id="button_shawarma" alignment="TOP_LEFT" layoutX="26.0" layoutY="84.0" mnemonicParsing="false" onAction="#order_click" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="Шаурма                       280 руб." />
+               <Button fx:id="button_pizza" alignment="TOP_LEFT" layoutX="26.0" layoutY="123.0" mnemonicParsing="false" onAction="#order_click" prefHeight="27.0" prefWidth="190.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="Пицца                          519 руб." />
+               <Label fx:id="label_soup" alignment="CENTER" layoutX="220.0" layoutY="45.0" prefHeight="31.0" prefWidth="34.0" style="-fx-border-color: #202e88;" text="---" textAlignment="CENTER" />
+               <Label layoutX="29.0" layoutY="190.0" prefHeight="27.0" prefWidth="92.0" text="ЧЕК :">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+               <Label fx:id="label_shawarma" alignment="CENTER" layoutX="220.0" layoutY="84.0" prefHeight="31.0" prefWidth="34.0" style="-fx-border-color: #202e88;" text="---" textAlignment="CENTER" />
+               <Label fx:id="label_pizza" alignment="CENTER" layoutX="220.0" layoutY="123.0" prefHeight="31.0" prefWidth="34.0" style="-fx-border-color: #202e88;" text="---" textAlignment="CENTER" />
+               <Button alignment="TOP_LEFT" layoutX="179.0" layoutY="176.0" mnemonicParsing="false" onAction="#button_order_clicked" prefHeight="31.0" prefWidth="75.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="Заказать" />
+               <Label fx:id="check_list" layoutX="26.0" layoutY="220.0" prefHeight="131.0" prefWidth="226.0" style="-fx-background-color: white; -fx-border-color: #202e88;" />
+            </children>
+         </Pane>
+         <Pane layoutX="576.0" layoutY="-1.0" prefHeight="557.0" prefWidth="302.0" style="-fx-border-color: #202e88; -fx-border-width: 3;">
+            <children>
+               <Label layoutX="6.0" layoutY="5.0" prefHeight="17.0" prefWidth="226.0" text="Задание №4" />
+               <Button alignment="CENTER" layoutX="26.0" layoutY="198.0" mnemonicParsing="false" onAction="#button_operator_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="AC" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="90.0" layoutY="198.0" mnemonicParsing="false" onAction="#button_inverse_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="+/-" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="154.0" layoutY="198.0" mnemonicParsing="false" onAction="#button_percent_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="\%" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="212.0" layoutY="198.0" mnemonicParsing="false" onAction="#button_operator_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="/" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Label fx:id="label_equationField" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="26.0" layoutY="51.0" prefHeight="147.0" prefWidth="250.0" style="-fx-border-color: #202e88; -fx-border-width: 1;" text="0" textAlignment="RIGHT">
+                  <font>
+                     <Font size="30.0" />
+                  </font>
+               </Label>
+               <Button alignment="CENTER" layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="7" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="90.0" layoutY="260.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="8" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="154.0" layoutY="260.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="9" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="212.0" layoutY="260.0" mnemonicParsing="false" onAction="#button_operator_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="*" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="26.0" layoutY="322.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="4" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="90.0" layoutY="322.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="5" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="154.0" layoutY="322.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="6" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="212.0" layoutY="322.0" mnemonicParsing="false" onAction="#button_operator_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="-" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="26.0" layoutY="384.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="1" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="90.0" layoutY="384.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="2" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="154.0" layoutY="384.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="3" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="212.0" layoutY="384.0" mnemonicParsing="false" onAction="#button_operator_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="+" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="26.0" layoutY="446.0" mnemonicParsing="false" onAction="#button_number_clicked" prefHeight="62.0" prefWidth="130.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="0" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="154.0" layoutY="446.0" mnemonicParsing="false" onAction="#button_operator_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="." textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+               <Button alignment="CENTER" layoutX="212.0" layoutY="446.0" mnemonicParsing="false" onAction="#button_equation_clicked" prefHeight="62.0" prefWidth="64.0" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="=" textAlignment="CENTER">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
+         <Pane layoutX="314.0" layoutY="186.0" prefHeight="370.0" prefWidth="250.0" style="-fx-border-color: #202e88; -fx-border-width: 3;">
+            <children>
+               <Label layoutX="8.0" layoutY="7.0" prefHeight="17.0" prefWidth="226.0" text="Задание №5" />
+               <RadioButton fx:id="box_white" layoutX="75.0" layoutY="39.0" mnemonicParsing="false" onAction="#box_clicked" prefHeight="42.0" prefWidth="92.0" text="Белый" />
+               <RadioButton fx:id="box_blue" layoutX="75.0" layoutY="86.0" mnemonicParsing="false" onAction="#box_clicked" prefHeight="42.0" prefWidth="92.0" text="Синий" />
+               <RadioButton fx:id="box_red" layoutX="75.0" layoutY="135.0" mnemonicParsing="false" onAction="#box_clicked" prefHeight="42.0" prefWidth="92.0" text="Красный" />
+               <Button fx:id="button_draw" alignment="CENTER" layoutX="77.0" layoutY="200.0" mnemonicParsing="false" onAction="#button_draw_clicked" style="-fx-border-color: #202e88; -fx-border-width: 3;" text="Нарисовать" textAlignment="CENTER" />
+               <Rectangle fx:id="rectangle_top" arcHeight="5.0" arcWidth="5.0" fill="#8d8d8d" height="27.0" layoutX="78.0" layoutY="251.0" stroke="#8d8d8d" strokeType="INSIDE" width="87.0" />
+               <Rectangle fx:id="rectangle_center" arcHeight="5.0" arcWidth="5.0" fill="#8d8d8d" height="27.0" layoutX="78.0" layoutY="278.0" stroke="#8d8d8d" strokeType="INSIDE" width="87.0" />
+               <Rectangle fx:id="rectangle_bottom" arcHeight="5.0" arcWidth="5.0" fill="#8d8d8d" height="27.0" layoutX="78.0" layoutY="305.0" stroke="#8d8d8d" strokeType="INSIDE" width="87.0" />
+            </children>
+         </Pane>
+      </children>
+   </AnchorPane>
+</VBox>
